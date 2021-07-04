@@ -18,6 +18,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'nvim-lua/popup.nvim'
         Plug 'nvim-lua/plenary.nvim'
         Plug 'nvim-telescope/telescope.nvim'
+        Plug 'vim-airline/vim-airline'
     endif
 call plug#end()
 
@@ -25,8 +26,9 @@ let mapleader = " "
 exec 'source' . '~/.config/nvim/coc.vim'
 exec 'source' . '~/.config/nvim/telescope.vim'
 exec 'source' . '~/.config/nvim/keymaps.vim'
+exec 'source' . '~/.config/nvim/git.vim'
 
 set termguicolors     " enable true colors support
 let ayucolor="dark"   " for dark version of theme
 colorscheme ayu
-
+let g:airline_powerline_fonts = 1
