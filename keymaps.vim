@@ -1,7 +1,9 @@
 nnoremap <leader>pv :Vex<CR>
 nnoremap <leader><CR> :so ~/.config/nvim/init.vim<CR>
 nnoremap <C-p> :GFiles<CR>
-nnoremap <leader>pf :Files<CR>
+nnoremap <leader>ff :Files<CR>
+nnoremap <leader>fs :Rg<CR>
+
 inoremap <C-c> <esc>
 nnoremap <C-j> :cnext<CR>
 nnoremap <C-k> :cprev<CR>
