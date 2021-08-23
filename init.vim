@@ -7,6 +7,10 @@ set shiftwidth=4
 set expandtab
 set smartindent
 
+autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
+autocmd Filetype html setlocal ts=2 sw=2 expandtab
+autocmd BufNewFile,BufRead *.ejs set syntax=html
+
 call plug#begin('~/.vim/plugged')
     " Plugins that don't make sense in VsCode
     if !exists('g:vscode')
@@ -25,6 +29,10 @@ call plug#begin('~/.vim/plugged')
         Plug 'puremourning/vimspector'
         Plug 'vimwiki/vimwiki'
         Plug 'romgrk/todoist.nvim', { 'do': ':TodoistInstall' }
+        Plug 'liuchengxu/vim-clap'
+        Plug 'vim-scripts/loremipsum'
+        Plug 'godlygeek/tabular'
+        Plug 'plasticboy/vim-markdown'
     endif
 call plug#end()
 
