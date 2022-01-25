@@ -4,5 +4,5 @@ nmap <Leader>di <Plug>VimspectorBalloonEval
 xmap <Leader>di <Plug>VimspectorBalloonEval
 
 nmap <Leader>dg <Plug>VimspectorLaunch
-nmap <Leader>dr <Plug>VimspectorReset
+nnoremap <leader>dr :VimspectorReset<CR>
 
