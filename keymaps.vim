@@ -1,4 +1,5 @@
 nnoremap <leader>fe :Vex<CR>
+nnoremap <leader>x :bd<CR>
 nnoremap <leader><CR> :so ~/.config/nvim/init.vim<CR>
 "nnoremap <C-p> :GFiles<CR>
 "nnoremap <C-m> :Buffers<CR>
@@ -24,3 +25,5 @@ nnoremap <C-s> :w<cr>
 "run node
 au FileType javascript nnoremap <leader>r :!node %<cr>
 au FileType python nnoremap <leader>r :!python %<cr>
+
+inoremap <silent><expr> <c-space> coc#refresh()

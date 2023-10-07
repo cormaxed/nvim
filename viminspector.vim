@@ -6,3 +6,4 @@ xmap <Leader>di <Plug>VimspectorBalloonEval
 nmap <Leader>dg <Plug>VimspectorLaunch
 nnoremap <leader>dr :VimspectorReset<CR>
 
+let g:vimspector_install_gadgets = [ 'debugpy', 'vscode-node-debug2' ]
