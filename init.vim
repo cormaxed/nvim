@@ -4,6 +4,8 @@
 if exists('g:vscode')
 " No plugins
 else
+    let g:coc_node_path = '/home/cormac/.nvm/versions/node/v22.2.0/bin/node'
+
     set scrolloff=8
     set number
     set relativenumber
@@ -33,7 +35,6 @@ else
     call plug#begin('~/.vim/plugged')
             Plug 'ojroques/vim-oscyank', {'branch': 'main'}
             Plug 'nvim-lua/plenary.nvim'
-            Plug 'nvim-telescope/telescope.nvim'
             Plug 'tpope/vim-vinegar'
             Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
             Plug 'ayu-theme/ayu-vim'
