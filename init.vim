@@ -1,24 +1,26 @@
-set scrolloff=8
-set number
-set relativenumber
 
-set tabstop=4 softtabstop=4
-set shiftwidth=4
-set expandtab
-set smartindent
-
-set shell=zsh
-
-autocmd Filetype ejs setlocal ts=2 sw=2 expandtab
-autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
-autocmd Filetype typescript setlocal ts=2 sw=2 expandtab
-autocmd Filetype html setlocal ts=2 sw=2 expandtab
-autocmd Filetype json setlocal ts=2 sw=2 expandtab
-autocmd Filetype markdown set wrap linebreak
 
 " Plugins that don't make sense in VsCode
-if !exists('g:vscode')
-    autocmd TextYankPost * if v:event.operator is 'y' && v:event.regname is '' | OSCYankReg " | endif"
+if exists('g:vscode')
+" No plugins
+else
+    set scrolloff=8
+    set number
+    set relativenumber
+
+    set tabstop=4 softtabstop=4
+    set shiftwidth=4
+    set expandtab
+    set smartindent
+    set shell=zsh
+
+    autocmd Filetype ejs setlocal ts=2 sw=2 expandtab
+    autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
+    autocmd Filetype typescript setlocal ts=2 sw=2 expandtab
+    autocmd Filetype html setlocal ts=2 sw=2 expandtab
+    autocmd Filetype json setlocal ts=2 sw=2 expandtab
+    autocmd Filetype markdown set wrap linebreak
+    autocmd TextYankPost * if v:event.operator is 'y' && v:event.regname is '' | OSCYankRegister "" | endif"
     set clipboard& clipboard^=unnamed,unnamedplus
 
     if has("autocmd")
@@ -29,6 +31,7 @@ if !exists('g:vscode')
 
 
     call plug#begin('~/.vim/plugged')
+            Plug 'ojroques/vim-oscyank', {'branch': 'main'}
             Plug 'nvim-lua/plenary.nvim'
             Plug 'nvim-telescope/telescope.nvim'
             Plug 'tpope/vim-vinegar'
@@ -55,6 +58,7 @@ if !exists('g:vscode')
             Plug 'pantharshit00/vim-prisma'
             Plug 'devinceble/Tortoise-Typing'
             Plug 'mfussenegger/nvim-dap'
+            Plug 'github/copilot.vim'
     call plug#end()
 
     let mapleader = " "
